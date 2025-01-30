@@ -1,9 +1,8 @@
-
 [
   {
     "kind": "column",
-    "name": "OpenAI (Assistants)",
-    "description": "Create, modify and run OpenAI Assistants.",
+    "name": "List OpenAI Thread Messages",
+    "description": "Retrieve all messages from a specific conversation thread in OpenAI's API, with optional filtering by run_id and pagination controls.",
     "author": "Gavin Horne <gavin@thinknetwork.com.au>",
     "params": [
       {
@@ -12,18 +11,33 @@
         "type": "string"
       },
       {
-        "name": "endpoint",
-        "displayName": "API Endpoint (Required)",
+        "name": "thread_id",
+        "displayName": "Thread ID (Required)",
         "type": "string"
       },
       {
-        "name": "body",
-        "displayName": "Body (JSON Schema Required)",
+        "name": "run_id",
+        "displayName": "Run ID (Optional, filter by run)",
         "type": "string"
       },
       {
-        "name": "json",
-        "displayName": "JSON Schema (Output)",
+        "name": "order",
+        "displayName": "Order (asc/desc, Optional)",
+        "type": "string"
+      },
+      {
+        "name": "limit",
+        "displayName": "Limit (Optional, Number of results)",
+        "type": "number"
+      },
+      {
+        "name": "after",
+        "displayName": "After Message ID (Optional, for pagination)",
+        "type": "string"
+      },
+      {
+        "name": "before",
+        "displayName": "Before Message ID (Optional, for pagination)",
         "type": "string"
       }
     ],
