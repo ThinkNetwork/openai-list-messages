@@ -1,4 +1,5 @@
-window.function = async function(api_key, thread_id, run_id, order, limit, after, before) {
+window.function = async function(api_key, thread_id, run_id, order, limit, after, before) 
+{
     // Validate API Key
     if (!api_key.value) {
         return "Error: OpenAI API Key is required.";
